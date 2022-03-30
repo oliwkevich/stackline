@@ -3,7 +3,7 @@ import BG from '../assets/video.mp4'
 const Hero = () => {
     return (
         <div className='w-full h-[90vh] top-[90px] text-white'>
-            <video className='object-cover h-full w-full absolute -z-10' src={BG} autoPlay loop muted/>
+            <video className='object-cover h-full w-full absolute -z-10' src={BG} autoplay="autoplay" loop muted preload='auto'/>
             <div className='uppercase w-full h-[90%] flex flex-col justify-center items-center text-center px-4'>
                 <h1>welcome to <span className='text-[#00d8ff]'>stack-line</span></h1>
                 <h1>have a nice day</h1>

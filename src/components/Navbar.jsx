@@ -41,7 +41,7 @@ export const Navbar = () => {
           className={
             nav
               ? "w-full bg-black h-[22vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
-              : "absolute" //top-[-100%]
+              : "absolute top-[-100%]" //
           }
         >
           <ul>

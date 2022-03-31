@@ -15,7 +15,7 @@ export const Page404 = () => {
       <div className='flex flex-col max-w-[1240px] m-auto items-center py-36'>
         <h1 className='text-9xl'>404</h1>
         <p className='text-4xl'>Сторінка не знайдена</p>
-        <button className='m-6 hover:animate-pulse'><Link to='/'>Повернутися назад</Link></button>
+        <button className='m-6 hover:animate-pulse py-2 px-7'><Link to='/'>Повернутися назад</Link></button>
       </div>
     </div>
   );

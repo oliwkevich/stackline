@@ -28,7 +28,7 @@ export const Navbar = () => {
             <li className="duration-300 hover:text-blue-400">
             <Link to='/about' className={pathname === '/about' ? "text-blue-400" : null}>Про сайт</Link>
             </li>
-            <button className="mx-7 hover:animate-pulse">
+            <button className="mx-7 hover:animate-pulse px-7">
               <Link to="/auth">Увійти</Link>
             </button>
           </ul>
@@ -43,14 +43,14 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "w-full bg-black h-[22vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
+              ? "w-full bg-black h-[30vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
               : "absolute top-[-100%]" //
           }
         >
           <ul>
             <li onClick={handleClick} className="text-xl"><Link to="/">Домашня</Link></li>
             <li onClick={handleClick} className="text-xl"><Link to="/about">Про Сайт</Link></li>
-            <button onClick={handleClick} className="m-4 px-24"><Link to="/auth">Увійти</Link></button>
+            <button onClick={handleClick} className="m-4 px-24 py-2"><Link to="/auth">Увійти</Link></button>
           </ul>
         </div>
       </div>

@@ -19,7 +19,7 @@ export const Home = () => {
         <h1>have a nice day</h1>
         <p className="py-4">якщо ти не знаєш, що робити, тисни клавішу внизу</p>
         <div>
-          <button className="px-12 sm:my-8 sm:px-40 hover:animate-pulse">
+          <button className="px-12 sm:my-8 sm:px-40 hover:animate-pulse py-2">
             <Link to="/about">FAQ</Link>
           </button>
         </div>

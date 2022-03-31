@@ -42,7 +42,7 @@ export const About = () => {
               <p className="flex px-3 md:pl-1">Дизайн</p>
             </div>
           </div>
-          <button className="mt-12 flex m-auto md:mt-16">
+          <button className="mt-12 flex m-auto md:mt-16 py-2 px-7">
             <Link to="/">Повернутися назад</Link>
           </button>
         </div>

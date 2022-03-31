@@ -22,10 +22,11 @@ export const Navbar = () => {
         <div className="hidden md:flex">
           <ul className="flex text-white">
             <li className="duration-300 hover:text-blue-400">
-              {pathname === '/' ? <Link to="/" className="text-blue-400">Домашня</Link> : <Link to="/">Домашня</Link>}
+              {/* {pathname === '/' ? <Link to="/" className="text-blue-400">Домашня</Link> : <Link to="/">Домашня</Link>} */}
+              <Link to='/' className={pathname === '/' ? "text-blue-400" : null}>Домашня</Link>
             </li>
             <li className="duration-300 hover:text-blue-400">
-            {pathname === '/about' ? <Link to="/about" className="text-blue-400">Про сайт</Link> : <Link to="/about">Про сайт</Link>}
+            <Link to='/about' className={pathname === '/about' ? "text-blue-400" : null}>Про сайт</Link>
             </li>
             <button className="mx-7 hover:animate-pulse">
               <Link to="/auth">Увійти</Link>

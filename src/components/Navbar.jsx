@@ -6,8 +6,9 @@ export const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => {
-    setNav(!nav);
+    setNav(prev => !prev);
   };
+
 
   return (
     <div className="w-full h-[90px] bg-black">
@@ -45,9 +46,9 @@ export const Navbar = () => {
           }
         >
           <ul>
-            <li className="text-xl"><Link to="/">Домашня</Link></li>
-            <li className="text-xl"><Link to="/about">Про Сайт</Link></li>
-            <button className="m-4 px-24"><Link to="/auth">Увійти</Link></button>
+            <li onClick={handleClick} className="text-xl"><Link to="/">Домашня</Link></li>
+            <li onClick={handleClick} className="text-xl"><Link to="/about">Про Сайт</Link></li>
+            <button onClick={handleClick} className="m-4 px-24"><Link to="/auth">Увійти</Link></button>
           </ul>
         </div>
       </div>

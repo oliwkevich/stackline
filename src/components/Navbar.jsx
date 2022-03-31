@@ -8,8 +8,6 @@ export const Navbar = () => {
   const handleClick = () => {
     setNav(prev => !prev);
   };
-
-
   return (
     <div className="w-full h-[90px] bg-black">
       <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
@@ -20,13 +18,13 @@ export const Navbar = () => {
         </div>
         <div className="hidden md:flex">
           <ul className="flex text-white">
-            <li>
+            <li className="duration-300 hover:text-blue-400">
               <Link to="/">Домашня</Link>
             </li>
-            <li>
+            <li className="duration-300 hover:text-blue-400">
               <Link to="/about">Про Сайт</Link>
             </li>
-            <button className="mx-7">
+            <button className="mx-7 hover:animate-pulse">
               <Link to="/auth">Увійти</Link>
             </button>
           </ul>

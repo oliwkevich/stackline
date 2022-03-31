@@ -1,9 +1,12 @@
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { pathname } = useLocation();
+
+  
 
   const handleClick = () => {
     setNav(prev => !prev);
@@ -19,10 +22,10 @@ export const Navbar = () => {
         <div className="hidden md:flex">
           <ul className="flex text-white">
             <li className="duration-300 hover:text-blue-400">
-              <Link to="/">Домашня</Link>
+              {pathname === '/' ? <Link to="/" className="text-blue-400">Домашня</Link> : <Link to="/">Домашня</Link>}
             </li>
             <li className="duration-300 hover:text-blue-400">
-              <Link to="/about">Про Сайт</Link>
+            {pathname === '/about' ? <Link to="/about" className="text-blue-400">Про сайт</Link> : <Link to="/about">Про сайт</Link>}
             </li>
             <button className="mx-7 hover:animate-pulse">
               <Link to="/auth">Увійти</Link>

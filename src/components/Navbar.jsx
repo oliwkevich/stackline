@@ -1,12 +1,31 @@
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const [isAuth, setIsAuth] = useState(false);
   const [nav, setNav] = useState(false);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
-  
+  useEffect(() => {
+    if(window.localStorage.getItem('tokenAPI')) {
+      setIsAuth(true);
+    } else {
+      setIsAuth(false);
+    }
+  }, [pathname])
+
+
+  const handleClickAuth = () => {
+    if(isAuth && window.confirm('Ви точно хочете вийти з профілю?')) {
+      window.localStorage.removeItem('tokenAPI');
+      navigate('/') 
+      setIsAuth(false);
+      } else if (isAuth) {
+        navigate('/about');
+      }
+    }
 
   const handleClick = () => {
     setNav(prev => !prev);
@@ -22,14 +41,13 @@ export const Navbar = () => {
         <div className="hidden md:flex">
           <ul className="flex text-white">
             <li className="duration-300 hover:text-blue-400">
-              {/* {pathname === '/' ? <Link to="/" className="text-blue-400">Домашня</Link> : <Link to="/">Домашня</Link>} */}
               <Link to='/' className={pathname === '/' ? "text-blue-400" : null}>Домашня</Link>
             </li>
             <li className="duration-300 hover:text-blue-400">
             <Link to='/about' className={pathname === '/about' ? "text-blue-400" : null}>Про сайт</Link>
             </li>
-            <button className="mx-7 hover:animate-pulse px-7">
-              <Link to="/auth">Увійти</Link>
+            <button onClick={handleClickAuth} className="mx-7 hover:animate-pulse px-7">
+              <Link to="/auth">{isAuth ? 'Вийти' : 'Увійти'}</Link>
             </button>
           </ul>
         </div>
@@ -43,8 +61,8 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "w-full bg-black h-[30vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
-              : "absolute top-[-100%]" //
+              ? "duration-300 w-full bg-black h-[30vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
+              : "duration-300 absolute top-[-100%]" //
           }
         >
           <ul>

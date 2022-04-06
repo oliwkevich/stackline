@@ -21,7 +21,7 @@ export const Home = () => {
         <h1>have a nice day</h1>
         <p className="py-4">якщо ти не знаєш, що робити, тисни клавішу{' '}        
         <Typical
-          loop={1}
+          loop={Infinity}
           steps={[
             ' внизу',
             1000,

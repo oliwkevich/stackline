@@ -1,5 +1,6 @@
 import BG from "../../assets/video.mp4";
 import { Link } from "react-router-dom";
+import Typical from 'react-typical';
 
 export const Home = () => {
   return (
@@ -18,7 +19,21 @@ export const Home = () => {
           welcome to <span className="text-[#00d8ff]">stack-line</span>
         </h1>
         <h1>have a nice day</h1>
-        <p className="py-4">якщо ти не знаєш, що робити, тисни клавішу внизу</p>
+        <p className="py-4">якщо ти не знаєш, що робити, тисни клавішу{' '}        
+        <Typical
+          loop={1}
+          steps={[
+            ' внизу',
+            1000,
+            ' знизу',
+            1000,
+            ' під текстом',
+            1000,
+            ' синю таку, внизу',
+            1000,
+          ]}
+        />
+        </p>
         <div>
           <button className="px-12 sm:my-8 sm:px-40 hover:animate-pulse py-2">
             <Link to="/about">FAQ</Link>

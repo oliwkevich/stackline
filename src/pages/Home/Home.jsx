@@ -10,6 +10,7 @@ export const Home = () => {
         autoPlay="autoplay"
         loop
         muted
+        playsInline
         preload="auto"
       />
       <div className="uppercase w-full h-[90%] flex flex-col justify-center items-center text-center px-4">

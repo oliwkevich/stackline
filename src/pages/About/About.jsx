@@ -11,6 +11,7 @@ export const About = () => {
         autoPlay="autoplay"
         loop
         muted
+        playsInline
         preload="auto"
       />
       <div className="flex flex-col max-w-[1240px] m-auto items-center">

@@ -5,6 +5,7 @@ import { Page404 } from "./pages/404/Page404";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Amdin } from "./pages/Admin/Admin";
+import { FAQ } from "./pages/FAQ/FAQ";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="auth" element={<Auth />} />
           <Route path="admin" element={<Amdin />} />
           <Route path="page404" element={<Page404 />} />
+          <Route path="faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="page404" />} />
         </Route>
       </Routes>

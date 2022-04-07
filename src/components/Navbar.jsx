@@ -46,7 +46,7 @@ export const Navbar = () => {
             <li className="duration-300 hover:text-blue-400">
             <Link to='/about' className={pathname === '/about' ? "text-blue-400" : null}>Про сайт</Link>
             </li>
-            <button onClick={handleClickAuth} className="mx-7 hover:animate-pulse px-7">
+            <button onClick={handleClickAuth} className="mx-7 hover:animate-pulse px-7 bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)]">
               <Link to="/auth">{isAuth ? 'Вийти' : 'Увійти'}</Link>
             </button>
           </ul>
@@ -68,7 +68,7 @@ export const Navbar = () => {
           <ul>
             <li onClick={handleClick} className="text-xl"><Link to="/">Домашня</Link></li>
             <li onClick={handleClick} className="text-xl"><Link to="/about">Про Сайт</Link></li>
-            <button onClick={handleClickAuth} className="m-4 px-24 py-2"><Link to="/auth">{isAuth ? 'Вийти' : 'Увійти'}</Link></button>
+            <button onClick={handleClickAuth} className="m-4 px-24 py-2 bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)]"><Link to="/auth">{isAuth ? 'Вийти' : 'Увійти'}</Link></button>
           </ul>
         </div>
       </div>

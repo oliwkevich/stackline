@@ -61,7 +61,7 @@ export const Auth = () => {
               className="placeholder:text-zinc-600 bg-zinc-400 border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
             />
             <div className="flex justify-between items-baseline">
-              <button onClick={onSubmin} className="mt-4 mr-2 bg-indigo-500 text-black px-4 py-1">
+              <button onClick={onSubmin} className="mt-4 mr-2 bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] text-black px-4 py-1">
                 Увійти
               </button>
               <a href="#" className="text-sm hover:underline">

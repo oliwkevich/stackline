@@ -35,8 +35,8 @@ export const Home = () => {
         />
         </p>
         <div>
-          <button className="px-12 sm:my-8 sm:px-40 hover:animate-pulse py-2">
-            <Link to="/about">FAQ</Link>
+          <button className="px-12 sm:my-8 sm:px-40 hover:animate-pulse py-2 bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)]">
+            <Link to="/faq">FAQ</Link>
           </button>
         </div>
       </div>

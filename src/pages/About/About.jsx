@@ -1,4 +1,4 @@
-import { HomeIcon, ColorSwatchIcon, MapIcon } from "@heroicons/react/outline";
+import { HomeIcon, ColorSwatchIcon, MapIcon, CubeTransparentIcon, EyeIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import BG from "../../assets/video.mp4";
 
@@ -42,8 +42,16 @@ export const About = () => {
               <ColorSwatchIcon className="w-5" />
               <p className="flex px-3 md:pl-1">Дизайн</p>
             </div>
+            <div className="flex items-center">
+              <CubeTransparentIcon className="w-5" />
+              <p className="flex px-3 md:pl-1">Анімації</p>
+            </div>
+            <div className="flex items-center">
+              <EyeIcon className="w-5" />
+              <p className="flex px-3 md:pl-1">Авторизація</p>
+            </div>
           </div>
-          <button className="mt-12 flex m-auto md:mt-16 py-2 px-7">
+          <button className="mt-12 flex m-auto md:mt-16 py-2 px-7 bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)]">
             <Link to="/">Повернутися назад</Link>
           </button>
         </div>

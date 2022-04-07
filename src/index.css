@@ -32,6 +32,6 @@
   }
 
   button {
-    @apply uppercase bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] rounded-xl
+    @apply uppercase rounded-md  
   }
 }

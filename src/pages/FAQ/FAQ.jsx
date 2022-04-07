@@ -8,13 +8,8 @@ export const FAQ = () => {
     watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (values) => console.log(values);
-
-  const clearForms = () => {
-    
-  }
-
-  console.log(errors)
 
   return (
     <div className="h-[80vh] bg-black text-gray-800 antialiased px-4 py-6 flex flex-col justify-center sm:py-12">

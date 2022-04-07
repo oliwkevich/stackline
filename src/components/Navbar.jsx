@@ -68,7 +68,7 @@ export const Navbar = () => {
           <ul>
             <li onClick={handleClick} className="text-xl"><Link to="/">Домашня</Link></li>
             <li onClick={handleClick} className="text-xl"><Link to="/about">Про Сайт</Link></li>
-            <button onClick={handleClick} className="m-4 px-24 py-2"><Link to="/auth">Увійти</Link></button>
+            <button onClick={handleClickAuth} className="m-4 px-24 py-2"><Link to="/auth">{isAuth ? 'Вийти' : 'Увійти'}</Link></button>
           </ul>
         </div>
       </div>

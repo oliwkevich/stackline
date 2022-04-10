@@ -61,7 +61,7 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "duration-300 w-full bg-black h-[30vh] text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
+              ? "duration-300 w-full bg-black/40 h-[30vh] backdrop-blur-lg text-white font-bold absolute top-[90px] left-0 flex justify-center text-center"
               : "duration-300 absolute top-[-100%]" //
           }
         >
